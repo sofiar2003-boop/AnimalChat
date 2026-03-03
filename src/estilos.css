@@ -684,6 +684,25 @@ body{
 }
 
 
+.media-video {
+  width: 100%;
+  max-width: 300px; 
+  aspect-ratio: 16 / 9; 
+  object-fit: cover; 
+  border-radius: 12px;
+  border: 2px solid #004a7c;
+  box-shadow: 0 4px 15px rgba(0, 74, 124, 0.4);
+  background-color: #0b141a; 
+  display: block;
+  margin: 10px 0;
+}
+
+
+.media-video:hover {
+  border-color: #00a2ff; 
+  transition: 0.3s;
+}
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -718,9 +737,32 @@ body{
     height:100%;
   }
 
-  .sidebar{ z-index:2; }
-  .chat-area{ z-index:1; }
+  .sidebar{ 
+    z-index:2; 
+  }
 
-  .mobile-chat .sidebar{ display:none; }
-  .mobile-chat .chat-area{ display:flex; }
+  .chat-area{ 
+    z-index:1; 
+  }
+
+  .mobile-chat .sidebar{ 
+    display:none; 
+  }
+
+  .mobile-chat .chat-area{ 
+    display:flex; 
+  }
+
+  .media-video {
+    max-width: 100%; 
+    height: auto;
+  }
+  
+  .messages {
+    padding: 15px;
+  }
+
+  .message {
+    max-width: 85%; 
+  }
 }

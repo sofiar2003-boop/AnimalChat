@@ -34,7 +34,7 @@ function MediaViewer({ media, currentIndex, onClose, onPrev, onNext, userAvatar 
         {currentItem.type === 'image' ? (
           <img src={currentItem.url} alt="Vista ampliada" className="viewer-image" />
         ) : (
-          <video src={currentItem.url} controls autoPlay className="viewer-video" />
+          <video src={currentItem.url} autoPlay loop muted playsInline className="viewer-video" />
         )}
 
         {/* Indicador de posición (opcional) */}

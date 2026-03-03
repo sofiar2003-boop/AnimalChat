@@ -16,6 +16,8 @@ export function ChatProvider({ children }) {
         { type: "image", url: "/media/perro/foto1-perro.jpg" },
         { type: "image", url: "/media/perro/foto2-perro.jpg" },
         { type: "image", url: "/media/perro/foto3-perro.jpg" },
+        { type: "video", url: "/media/perro/video1-perro.mp4" },
+        { type: "video", url: "/media/perro/video2-perro.mp4" },
       ],
       messages: [
         { id: 101, text: "¡Hola! Soy Perro. ¿Cómo estás hoy?", fromMe: false }
@@ -33,6 +35,8 @@ export function ChatProvider({ children }) {
         { type: "image", url: "/media/gato/foto1-gato.jpg" },
         { type: "image", url: "/media/gato/foto2-gato.jpg" },
         { type: "image", url: "/media/gato/foto3-gato.jpg" },
+        { type: "video", url: "/media/gato/video1-gato.mp4" },
+        { type: "video", url: "/media/gato/video2-gato.mp4" },
       ],
       messages: [
         { id: 201, text: "Soy Gato. Estoy tranqui… pero te leo", fromMe: false }
@@ -50,6 +54,8 @@ export function ChatProvider({ children }) {
         { type: "image", url: "/media/foca/foto1-foca.jpg" },
         { type: "image", url: "/media/foca/foto2-foca.jpg" },
         { type: "image", url: "/media/foca/foto3-foca.jpg" },
+        { type: "video", url: "/media/foca/video1-foca.mp4" },
+        { type: "video", url: "/media/foca/video2-foca.mp4" },
       ],
       messages: [
         { id: 301, text: "¡Hola! Soy Foca. ¿Hablamos del mar?", fromMe: false }
@@ -67,6 +73,8 @@ export function ChatProvider({ children }) {
         { type: "image", url: "/media/cerdo/foto1-cerdo.jpg" },
         { type: "image", url: "/media/cerdo/foto2-cerdo.jpg" },
         { type: "image", url: "/media/cerdo/foto3-cerdo.jpg" },
+        { type: "video", url: "/media/cerdo/video1-cerdo.mp4" },
+        { type: "video", url: "/media/cerdo/video2-cerdo.mp4" },
       ],
       messages: [
         { id: 401, text: "Hola, soy Cerdo . ¿Qué comemos hoy? jaja", fromMe: false }
@@ -84,6 +92,8 @@ export function ChatProvider({ children }) {
         { type: "image", url: "/media/perezoso/foto1-perezoso.jpg" },
         { type: "image", url: "/media/perezoso/foto2-perezoso.jpg" },
         { type: "image", url: "/media/perezoso/foto3-perezoso.jpg" },
+        { type: "video", url: "/media/perezoso/video1-perezoso.mp4" },
+        { type: "video", url: "/media/perezoso/video2-perezoso.mp4" },
       ],
       messages: [
         { id: 501, text: "Hey… soy Perezoso. Contestame tranqui", fromMe: false }
@@ -101,6 +111,8 @@ export function ChatProvider({ children }) {
         { type: "image", url: "/media/pez/foto1-pez.jpg" },
         { type: "image", url: "/media/pez/foto2-pez.jpg" },
         { type: "image", url: "/media/pez/foto3-pez.jpg" },
+        { type: "video", url: "/media/pez/video1-pez.mp4" },
+        { type: "video", url: "/media/pez/video2-pez.mp4" },
       ],
       messages: [
         { id: 601, text: "Hola!! soy Pez. ¿Listo para charlar?", fromMe: false }
