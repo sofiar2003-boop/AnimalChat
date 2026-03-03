@@ -298,7 +298,7 @@ function Chat() {
                 <img src={c.avatar} className="chat-avatar" style={{ width: "40px", height: "40px" }} alt={c.name} />
                 <div style={{ color: "white", marginLeft: "10px" }}>{c.name}</div>
                 <small style={{ color: "#8696a0", fontSize: "12px" }}>
-                  No disponible
+                  En linea
                 </small>
               </div>
             ))}
