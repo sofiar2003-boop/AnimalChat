@@ -33,10 +33,8 @@ function Chat() {
 
   const messagesRef = useRef(null);
 
-  // ✅ si no hay id, chat es null (NO rompe nada)
   const chat = id ? chats.find(c => c.id === Number(id)) : null;
 
-  // ✅ cuando hay chat seleccionado en mobile => mostramos chat
   const showChatMobile = !!chat;
 
   useEffect(() => {
@@ -46,7 +44,6 @@ function Chat() {
     }
   }, [notification]);
 
-  // ✅ AUTOSCROLL SEGURO (solo si existe chat)
   useEffect(() => {
     if (!chat || !messagesRef.current) return;
     messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
@@ -80,7 +77,6 @@ function Chat() {
   return (
     <div className={`app-container ${isMobile && showChatMobile ? "mobile-chat" : ""}`}>
       
-      {/* SIDEBAR */}
       <div className="sidebar">
         <div className="sidebar-header header-top">
           <span>🐾 AnimalChat</span>
@@ -104,15 +100,13 @@ function Chat() {
         />
       </div>
 
-      {/* CHAT AREA: solo renderiza si hay chat */}
       {chat && (
         <div className="chat-area" style={{ backgroundColor: background }}>
           
           <div className="chat-header">
-            {/* ✅ BOTON VOLVER SOLO EN MOBILE */}
             {isMobile && (
               <button
-                onClick={() => navigate("/")}   // 👈 vuelve al home (lista)
+                onClick={() => navigate("/")}   
                 style={{
                   background: "none",
                   border: "none",
@@ -151,8 +145,6 @@ function Chat() {
 
       {notification && <div className="notification">{notification}</div>}
 
-      {/* PERFIL CONTACTO */}
-      {/* PERFIL CONTACTO */}
 {chat && showContactProfile && (
   <div className="contacts-modal" onClick={() => setShowContactProfile(false)}>
     <div
@@ -180,7 +172,6 @@ function Chat() {
         </p>
       </div>
 
-      {/* DESCRIPCIÓN */}
       <div style={{ marginBottom: "20px" }}>
         <p
           style={{
@@ -196,7 +187,6 @@ function Chat() {
         </p>
       </div>
 
-      {/* GALERÍA */}
       {chat.media?.length > 0 && (
         <>
           <p
@@ -281,7 +271,6 @@ function Chat() {
   </div>
 )}
 
-      {/* CONTACTOS */}
       {showContacts && (
         <div className="contacts-modal" onClick={() => setShowContacts(false)}>
           <div className="contacts-content" onClick={(e) => e.stopPropagation()}>
@@ -306,7 +295,6 @@ function Chat() {
         </div>
       )}
 
-      {/* CONFIG */}
       {showSettings && (
         <div className="contacts-modal" onClick={() => setShowSettings(false)}>
           <div className="contacts-content" onClick={(e) => e.stopPropagation()}>
@@ -335,7 +323,6 @@ function Chat() {
         </div>
       )}
 
-      {/* VISOR */}
       {viewerConfig.show && (
         <MediaViewer {...viewerConfig} onClose={closeViewer} onNext={showNext} onPrev={showPrev} />
       )}

@@ -14,7 +14,7 @@ Funciones principales:
   - Teléfono
   - Email
   - Descripción
-- Visor de imágenes
+- Visor de imágenes y videos
 - Cambio dinámico de fondo 
 - Diseño totalmente responsivo (320px – 2000px)
 
@@ -23,17 +23,12 @@ Estructura del proyecto:
 - `components/` - Componentes reutilizables (ChatList, Message, Sidebar, etc.)
 - `context/` - Manejo global de estados (AuthContext, ChatContext, ThemeContext)
 - `pages/` - Vistas principales (Login, Chat, Home)
-- `public/` - Imágenes 
+- `public/` - Imágenes y videos 
 
 
 La aplicación fue diseñada para funcionar correctamente desde 320px hasta pantallas grandes (2000px), adaptando:
-
 - Vista tipo WhatsApp en desktop
 - Vista tipo aplicación móvil en pantallas pequeñas
 
----
 
-Link de despliegue: (agregar link de Vercel)
-
-Link del repositorio: (agregar link de GitHub)
 

@@ -23,7 +23,6 @@ function ChatList() {
                 {chat.name}
               </div>
 
-              {/* ✅ ahora mostramos teléfono en vez de descripción */}
               <div className="contact-phone">
                 {chat.phone}
               </div>

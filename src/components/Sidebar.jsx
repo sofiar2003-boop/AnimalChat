@@ -1,4 +1,3 @@
-// ✅ Agregamos 'useState' al import
 import { useContext, useState } from "react" 
 import { FaWhatsapp, FaPhone, FaCog } from "react-icons/fa"
 import { AuthContext } from "../context/AuthContext"
@@ -6,7 +5,7 @@ import { AuthContext } from "../context/AuthContext"
 function Sidebar({ setShowSettings, setNotification, setShowContacts, onOpenUserProfile }) {
 
   const { user, logout } = useContext(AuthContext)
-  // Ahora esto ya no dará error
+
   const [showMyProfile, setShowMyProfile] = useState(false)
 
   const handlePhoneClick = () => {
@@ -20,7 +19,6 @@ function Sidebar({ setShowSettings, setNotification, setShowContacts, onOpenUser
   return (
     <div className="sidebar-bottom">
 
-      {/* 👤 USUARIO LOGUEADO */}
       {user && (
         <div className="sidebar-user">
           <img
@@ -37,7 +35,6 @@ function Sidebar({ setShowSettings, setNotification, setShowContacts, onOpenUser
             </button>
           </div>
 
-          {/* MODAL MI PERFIL */}
           {showMyProfile && (
             <div className="contacts-modal" onClick={() => setShowMyProfile(false)}>
               <div className="contacts-content" onClick={(e) => e.stopPropagation()}>
@@ -45,8 +42,8 @@ function Sidebar({ setShowSettings, setNotification, setShowContacts, onOpenUser
                   <img 
                     src={user.avatar} 
                     onClick={() => {
-                      onOpenUserProfile(); // Esto abre el visor grande
-                      setShowMyProfile(false); // Opcional: cierra el modal de texto para ver la foto limpia
+                      onOpenUserProfile(); 
+                      setShowMyProfile(false); 
                     }}
                     style={{ width: '150px', height: '150px', borderRadius: '50%', cursor: 'pointer', objectFit: 'cover' }} 
                   />
@@ -68,7 +65,6 @@ function Sidebar({ setShowSettings, setNotification, setShowContacts, onOpenUser
         </div>
       )}
 
-      {/* 🔘 ICONOS */}
       <div className="sidebar-icons">
         <FaWhatsapp onClick={handleWhatsappClick} />
         <FaPhone onClick={handlePhoneClick} />

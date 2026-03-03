@@ -124,7 +124,6 @@ export function ChatProvider({ children }) {
     const numericId = Number(chatId)
     if (Number.isNaN(numericId)) return
 
-    // 1) mensaje del usuario
     setChats(prev =>
       prev.map(chat =>
         chat.id === numericId
@@ -133,7 +132,6 @@ export function ChatProvider({ children }) {
       )
     )
 
-    // 2) respuesta automática
     setTimeout(() => {
       setChats(prev =>
         prev.map(chat => {

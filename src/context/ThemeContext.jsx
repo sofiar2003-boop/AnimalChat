@@ -9,7 +9,6 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem("bg", background)
-    // aplico en el body para que NUNCA quede blanco
     document.body.style.backgroundColor = background
   }, [background])
 

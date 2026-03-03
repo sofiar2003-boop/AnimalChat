@@ -17,10 +17,8 @@ export default function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
 
-        {/* ✅ Entrar a la app manda a /chat */}
         <Route path="/" element={<Navigate to="/chat" replace />} />
 
-        {/* ✅ Lista (solo sidebar) */}
         <Route
           path="/chat"
           element={
@@ -30,7 +28,6 @@ export default function App() {
           }
         />
 
-        {/* ✅ Chat abierto */}
         <Route
           path="/chat/:id"
           element={
